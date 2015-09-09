@@ -60,6 +60,15 @@ element("Oxygen-iso",'8','8')
 #norb=totalnumber of protons, neutrons is the diff as in A Z X format
 #iso tag defines element isotope status
 
+"""
+User Notes:
+binding energy ~ approx 10^3eV v orbit
+element(Hydrogen,1,1) ~ 13.6eV
+subnuclear energies ~ 10^9eV=GeV
+p/norbitals have finite size and structure
+high energy scattering / compton the accepted theory and standard model
+still incomplete p&n composed of three quarks each in standard model
+"""
 
 
 
