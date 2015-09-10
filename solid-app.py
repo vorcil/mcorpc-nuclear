@@ -31,15 +31,48 @@ def eye_sensitivity():
     m1="Photopic curve, eye sensitivity function, shows the eye's response to different wavelengths of light"
     m2="The eye's sensitivity is maximum at 555nm (Yellowish-green) and by definition is 683 lm/W"
     m3="Luminous power (or luminous flux) in lumen represents the pwoer of al imuniuos source (in watt) weighted to match the eye response of the standard observer"
+
+def lumen():
     #at 555nm
-    1w_555="683.0 LUMENS"
+    w555="683.0 LUMENS"
     #at 480nm
-    1w_480="63.0 LUMENS"
-
+    w480="63.0 LUMENS"
+    #colour rendering index
+    #On a scale of 1-100 that measures a light source's ability to render/reproduce
+    #the colours of various objects faithfully in comparison with an
+    #ideal or natural light source (often the sunlight)
+    CRI={};
+    for i in range(1,100):
+        CRI[i]=i;
+        print CRI[i];
+        
+def temperature():
+    #a way to think of the oclour temperature is how warm or cool/cold the light is
+    #another way is the blackbody radiator; wavelength of the emitted radiation decreases when the temperature increases
     
-    
+    #human perception in kelvin, decending order of "yellowish" warmth
+    light_warm1=2700
+    light_warm2=3200
+    light_cold2=4500
+    light_cold1=6000 
+
+def LEDmerit(emit,inject,active):
+    #number of photons that come out of LED per second - set in console
+    n_emission=emit
+    #number of electrons injected to LED per second - set in console
+    n_injection=inject
+    #external quantum efficency
+    n_ext=n_emission/n_injection
+    #number of photons emitted from active region per second - set in console
+    n_active=active
+    #ninternal defines the structural quality of materials and interfaces
+    n_internal=n_active/n_injection
+    #nextraction defines the packaging architecture
+    n_extraction=n_emission/n_active
 
 
+
+        
     
 
     
