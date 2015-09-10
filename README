@@ -2,7 +2,7 @@
 
 This repository of nuclear field data holds a housing of functions to the PALANTIR software for the medcorp nuclear medicine module.
 
-![alt tag](http://github.com/vorcil/mcorpc-nuclear/bin/nano1.png)
+![alt tag](https://github.com/vorcil/mcorpc-nuclear/blob/master/bin/nano1.png)
 
 The majority of functions are implemented in python, but several will extend external libraries to matlab, wolfram, mathematica and other merc repos.
 
