@@ -56,13 +56,14 @@ def temperature():
     light_cold2=4500
     light_cold1=6000 
 
+#calculating the merit of LED properties
 def LEDmerit(emit,inject,active):
     #number of photons that come out of LED per second - set in console
     n_emission=emit
     #number of electrons injected to LED per second - set in console
     n_injection=inject
     #external quantum efficency
-    n_ext=n_emission/n_injection
+    n_external=n_emission/n_injection
     #number of photons emitted from active region per second - set in console
     n_active=active
     #ninternal defines the structural quality of materials and interfaces
@@ -70,7 +71,52 @@ def LEDmerit(emit,inject,active):
     #nextraction defines the packaging architecture
     n_extraction=n_emission/n_active
 
+#energy efficent lighting function - set in console
+ def EEL(emit,inject,power_optical,current,voltage):
+    #same as above but for non-diodal sources
+    n_emission=emit
+    n_injection=inject
+    n_external=n_emission/n_injection
 
+    #power efficency of source
+    n_power=power_optical.(current*voltage)
+    
+#trasmission photons from light escape cone
+#console is able to rearange/switch n1/n2theta1/theta2 via the switch argument
+#switch(photon_extraction(...);
+def photon_extraction(n1,n2,theta1,theta2,n_sc):
+    #snell-descarteslaw n1*math.sin(theta1)=n2*math.sin(theta2)
+    theta1=(n2/n1)*math.sin(theta2)
+    #critical angle of extraction
+    thetac=math.arcsin(1/n_sc)*n_sc # should be approx 25degrees for LED
+    n_extraction=(1-math.sin(thetac))/(2) #should be approx 5% for LED
+
+#set properties under console->semi-conductor->properties
+def properties(conductivity,resistivity,dq,dt,vd,A):
+    #electrical conductivity
+    conduct=conductivity
+    #electrical resistivity
+    resist=resistivity
+    #current, delta Q being the change in charge per change in time delta T
+    I=dq/dt
+    #in average time delta T charge carriers move an average distance
+    avex=vd*dt
+    #current density per unit area - incoincidentally = nAeVd/A = neVd = sigmaE
+    J=I/A
+
+#exploration function for relation between electrical and thermal conductivity
+def wiedemannFranzLaw(K,sigma,T,Na,Kb):
+    #derivation of the charge resistance per K^2 per second
+    charge_resistance=K/(sigma*T);
+    #basic heat capacity - per mol
+    Cmol=3*Na*Kb;
+    #kb the boltzman constant, Na avagadros number
+    #material heat capacity
+    C=3*Na*Kb#===(dU/dT)
+    #experimental behaviour predicts the dulong-petit observation
+    
+    
+    
 
         
     
