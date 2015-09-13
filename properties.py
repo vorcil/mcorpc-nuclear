@@ -4,11 +4,13 @@ Repo: http://github.com/vorcil/mcorpc-nuclear
 Note: Conglamatory of semiconductor property methods
 """
 import math
+from numpy import matrix
+from numpy import linalg
 
-#console message for user 
-intro_message="The existance of the band gap for a semiconductor means that the absorption of light by a slab of the semiconductor depends very much on the frequency or wavelength of the light: Photons with an energy less than the band gap will not be absorbed as there are no electronic energy levels available in the gap, as indicated schematically in /bin.
+#console message for user 1
+#intro_message="The existance of the band gap for a semiconductor means that the absorption of light by a slab of the semiconductor depends very much on the frequency or wavelength of the light: Photons with an energy less than the band gap will not be absorbed as there are no electronic energy levels available in the gap, as indicated schematically in bin.
 
- For photons with an energy h.v greater than the gap, absorption is possible through the excitation of an electron in the valence band to an empty level in the conduction band at an energy h.v above the filled level."
+ #For photons with an energy h.v greater than the gap, absorption is possible through the excitation of an electron in the valence band to an empty level in the conduction band at an energy h.v above the filled level."
 
 #We measure the absorption through the absorption coefficent alpha defined by the following relationship
 def absorption(l0,l,x):
@@ -54,6 +56,21 @@ The monochromator will pass He-Ne laser light (wavelength 632.8nm) in zeroth, 1s
 
 #Repeat for the other orders, including the zeroth. (The second order response is equivalent to incident light of wavelength 2*(632.8nm) ect)
 
+def lattice(n1,n2,n3,volatoms,volunit):
+    #direction vector for three concurrent vectors
+    a="null" # set in console
+    b="null" # set in console
+    c="null" # set in console
+    r=n1*a+n2*b+n3*c
+    #atomic packing factor - set in console
+    APF=volatoms/volunit # volume of atoms in unit cell / volume of the unit cell
 
+#properties of determinants
+def E():
+    #let E be some matrix of an elementary row operation
+    A=matrix([[1,1,1],[1,1,1],[1,1,1]])#test matrix
+    x=matrix([[1],[2],[3]]);
+    print A*x
+#print linalg.solve(A, x)
 
-
+#    E();
