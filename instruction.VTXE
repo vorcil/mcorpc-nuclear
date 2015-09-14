@@ -1,0 +1,30 @@
+"""
+Cross site scripting
+Information leakage
+Content spoofing
+Predictable Resource location
+SQL injection
+Insufficient Autherntication
+Insufficent Authorization
+Abuse of functionality
+HTTP response splitting
+directory indexing
+
+ZERO DAY
+Vulnerability refers to a hole in software that is unknown to the vendor.
+This security hole is then exploited by hackers before the vendor becomes aware and huries to fix it. This exploit is called a zero day attack.
+
+Scanners can't identify the exploits
+WAFs / IDSs can't defend them
+All HTTP requests appear completely normal
+Business logic flaws = $$$
+3-5 years XSS, SQli and CSRF on the way out
+
+Online polls are extremely common way to capture or sway public opinion
+No niche is too big or too narrow
+
+Fire up burp proxy
+
+Artificial Scarcity DoS
+To prevent multiple purchase of a scarce item (airline seats, physical goods, usernames, etc), an application willl lock the object for a period of time.
+

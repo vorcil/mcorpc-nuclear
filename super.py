@@ -62,3 +62,33 @@ def diamag_inside(M,H):
     M=-1*H
     B=0;
 
+#display the critical super conducting temperatures
+criticals={};
+def critical(inputName):
+    #temperatures in kelvin - small list - concatenate further in console
+    criticals["Titanium"]="0.4"
+    criticals["Vanadium"]="5.0"
+    criticals["Technetium"]="7.8"
+    criticals["Niobium"]="9.3"
+    criticals["Tantalum"]="4.5"
+    ##test print to terminal
+    print criticals[inputName]
+
+#call the field strength
+def field():
+    #the sets of common field strengths in application MRI
+    #terra watt units
+    set1=1.5
+    set2=3
+    set3=5
+    set4=7
+    #in T/yr
+    Nb-Ti=600
+
+    #High-field research magnets
+    lab1=32
+    allconducting=45#T hybrid
+    nmr=23.5#T, -> 1 GHz
+    #theoretical fusion
+    NB_3Sn=15#T/yr -> up to 100T/yr
+    
